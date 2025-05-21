@@ -56,7 +56,7 @@ Foram adicionados os dados de georreferenciamento de cada município à lista de
 Neste repositório há algumas representações diferentes dos dados obtidos, as quais descrevemos a seguir.
 
 ### Dados Brutos
-A arquivo compactado (para otimizar armazenamento) `dados.json.zip` contém um objeto em que
+A arquivo `dados.json` contém um objeto em que
 
  - cada chave corresponde ao código atribuído pelo IBGE a uma localidade,
  - cada valor corresponde aos dados brutos obtidos de uma chamada à API do IBGE com a seguinte url `https://servicodados.ibge.gov.br/api/v1/pesquisas/indicadores/29169|29170|96385|29171|96386|143558|143514|60036|60037|60045|78187|78192|5908|5913|5929|5934|5950|5955|47001|30255|28141|60048|29749|30279|60032|28242|95335|60030|60029|60031|93371|77861|82270|29167|87529|87530|91245|91247|91249|91251/resultados/<codigo_da_localidade>` (em que `<codigo_da_localidade>` é substituído pelo código da localidade em questão.
@@ -89,7 +89,7 @@ foi convertido em:
 Essa mesma representação se encontra nos arquivos `dados_lista.csv` e `dados_lista.json` (sendo este último uma lista simples, em que cada linha corresponde aos dados de uma localidade).
 
 ### Dados Recentes
-O arquivo `dados_recentes.json` contém um recorte dos dados em `dados_formatados.json`, de forma que cada indicador contém somente o dados mais recente dentre os recuperados da API. Por exemplo, o indicador abaixo:
+O arquivo `dados_recentes.json` (também replicado em formato CSV em `dados_recentes.csv`) contém um recorte dos dados em `dados_formatados.json`, de forma que cada indicador contém somente o dados mais recente dentre os recuperados da API. Por exemplo, o indicador abaixo:
 
 ```json
 "docentes_ens_medio": {
